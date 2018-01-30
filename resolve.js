@@ -5,7 +5,7 @@ function resolveReject() {
   }));
   return promise;
 }
-
+// resolveReject().then(() => 5).then((arg) => { console.log(arg); });
 // function onReject(error) {
 //   console.log(error.message);
 // }

@@ -1,11 +1,16 @@
-const promise = new Promise(((fulfill, reject) => {
-  const errorObject = Error('REJECTED!');
-  setTimeout(() => reject(errorObject), 300);
-}));
-
 function onReject(error) {
   console.log(error.message);
+  return error.message;
 }
-promise.then(() => {}, onReject);
 
-// Your solution here
+function rejectPromise() {
+  const promise = new Promise((fulfill, reject) => {
+    const errorObject = Error('REJECTED!');
+    setTimeout(() => reject(errorObject), 300);
+  });
+  return promise.catch(onReject);
+}
+
+
+// promise.then(() => {}, onReject);
+module.exports = rejectPromise;

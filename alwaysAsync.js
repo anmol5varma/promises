@@ -1,11 +1,11 @@
-function alwaysAsync(callback) {
+function alwaysAsync() {
   const arr = [];
-  const promise = new Promise((resolve, reject) => {
+  const promise = new Promise((resolve) => {
     resolve('PROMISE VALUE');
   });
-  promise.then(arr.push).then(callback);
+  const promise2 = promise.then((val) => { console.log(val); arr.push(val); return arr; });
   arr.push('MAIN PROGRAM');
-  return promise;
+  return { promise, promise2 };
 }
 
 module.exports = alwaysAsync;
