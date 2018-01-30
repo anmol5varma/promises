@@ -8,7 +8,7 @@
 // function printB() {
 //   console.log('B');
 // }
-const promise = new Promise((resolve, reject) => {
+const promise = new Promise((resolve) => {
   resolve('ey');
 });
 

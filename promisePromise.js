@@ -1,4 +1,4 @@
-const espromise = require('es6-promise');
+// const espromise = require('es6-promise');
 
 function first() {
   const promise1 = new Promise((resolve) => {
