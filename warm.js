@@ -3,6 +3,6 @@ function timeOut() {
   console.log(val);
   return val;
 }
-setTimeout(timeOut, 300);
+const fun = setTimeout(timeOut, 300);
 
-module.exports = timeOut;
+module.exports = { timeOut, fun };
